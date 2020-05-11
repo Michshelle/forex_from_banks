@@ -1,0 +1,66 @@
+{
+  "HangSeng_Info":
+  {
+    "API_Key":
+    {
+       "ClientID":"apply",
+       "ClientSecret":"apply"
+    },
+    "URLs":
+    {
+     "Base_URL": "https://api.hangseng.com/live",
+     "Path_URL": 
+     {
+       "Forex_Info": "/open-banking/v1.0/personal-foreign-exchange-rates"
+     }
+    },
+    "Keyword": ["EUR","GBP","USD","CNY"]
+  },
+  "BOCHK_Info":
+  {
+    "Auth_Door": 
+    {
+      "production": "https://apigateway.bochk.com/auth/oauth/v2/token"
+    },
+    "API_Url":
+    {
+    "Banknote_HKD": "https://apigateway.bochk.com/fx/hkdnoterate/v1",
+    "TT_HKD": "https://apigateway.bochk.com/fx/hkdrate/v1",
+    "TT_USD": "https://apisandbox.bochk.com/fx/usdrate/v1"
+    },
+    "API_Key":
+    {
+      "Banknote_HKD_Key": "APp",
+      "TT_HKD_Key": "APp",
+      "TT_USD_Key": "APp"    
+    },
+    "API_Secret":
+    {
+      "Banknote_HKD_Secret": "APp",
+      "TT_HKD_Secret": "APp",
+      "TT_USD_Secret": "APp",       
+    },
+    "Keyword": ["EUR","GBP","USD","CNY","RMB"]
+  },
+  "BOC_Info":
+  {
+    "Forex_Webpage": "https://www.boc.cn/sourcedb/whpj/index.html",
+    "Validation_Sequence": ["货币名称","现汇买入价","现钞买入价","现汇卖出价","现钞卖出价"],
+    "Keyword": ["欧元","英镑","港币","美元"]
+  },
+  "CCB_Info":
+  {
+    "Forex_Xml": "http://forex1.ccb.com/cn/home/news/jshckpj_new.xml",
+    "Keyword": ["978","826","344","840"],
+    "Xpath":
+    {
+      "base": ".//ReferencePriceSettlement",
+      "currency": "/Ofrd_Ccy_CcyCd",
+      "forex_buy_cash": "/BidRateOfCash",
+      "forex_sell_cash": "/OfrRateOfCash",
+      "forex_buy_tt": "/BidRateOfCcy",
+      "forex_sell_tt": "/OfrRateOfCcy"
+    }
+  }
+
+}
