@@ -1,6 +1,7 @@
 import json
 import requests
 import xml.etree.ElementTree as ET
+import time
 from operator import itemgetter
 
 
@@ -13,6 +14,7 @@ class CCB_Data(object):
         self.webpage = js_bank["CCB_Info"]["Forex_Xml"]  
         self.list_keywords = js_bank["CCB_Info"]["Keyword"]
         self.req = requests.get(self.webpage).text
+        time.sleep(1)
         self.base =  js_bank["CCB_Info"]["Xpath"]["base"]
         self.currency =  js_bank["CCB_Info"]["Xpath"]["currency"]
         self.forex_buy_cash =js_bank["CCB_Info"]["Xpath"]["forex_buy_cash"]
@@ -42,8 +44,6 @@ class CCB_Data(object):
         self.forex_list = self.__handle_data(content_data=all_list)
         return self.forex_list
 
-
-    
     def __handle_data(self,content_data=None):
         
         if content_data is None:
