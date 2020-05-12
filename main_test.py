@@ -1,7 +1,6 @@
 import json
 from lxml import etree
 from datetime import datetime
-import mysql.connector
 
 from hangseng_api_fetch import HangSeng_Data
 from bochk_api_fetch import BOCHK_Data
