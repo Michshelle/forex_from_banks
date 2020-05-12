@@ -1,5 +1,6 @@
 # forex_from_banks
 Under Python3.7
+SQL part would be omitted
 forex rate from large banks in HKG SAR and China Mainland
 
 ## update log:
